@@ -1,7 +1,8 @@
 package="Minecraft"
+displayname="Minecraft Server"
 version="1.8.4-0016"
 maintainer="Mojang AB"
-maintainer_url="http://minecraft.net"
+maintainer_url="http://minecraft.net"
 distributor="Colin Hildinger (thanks to patters)"
 distributor_url="http://pcloadletter.co.uk/2012/01/11/minecraft-package-for-synology/"
 description="Minecraft is a game about placing blocks to build anything you can imagine. At night monsters come out, make sure to build a shelter before that happens. This package downloads the Minecraft server jar file directly from Mojang since it should not be redistributed."

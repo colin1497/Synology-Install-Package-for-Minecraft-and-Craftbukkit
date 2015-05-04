@@ -4,7 +4,7 @@
 #--------package maintained at pcloadletter.co.uk
 
 if [ "${SYNOPKG_PKGNAME}" == "Minecraft" ]; then
-  DOWNLOAD_PATH="https://s3.amazonaws.com/Minecraft.Download/versions/1.8.4"
+  DOWNLOAD_PATH="http://s3.amazonaws.com/Minecraft.Download/versions/1.8.4"
   DOWNLOAD_FILE="minecraft_server.1.8.4.jar"
   UPGRADE_FILES="server.properties *.txt world"
 fi
@@ -70,6 +70,7 @@ preinst ()
         echo "There was a problem downloading ${WGET_FILENAME} from the official download link, "
         echo "which was \"${WGET_URL}\" "
         echo "Alternatively, you may download this file manually and place it in the 'public' shared folder. "
+        echo "Debug: ${DOWNLOAD_URL}"
         exit 1
       fi
     fi
