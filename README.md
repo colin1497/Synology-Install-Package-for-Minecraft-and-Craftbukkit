@@ -22,6 +22,7 @@ http://www.hildinger.us/sspks/index.php
 I've started discussion threads at:
 
 http://forum.synology.com/enu/viewtopic.php?f=190&t=100311
+
 http://www.minecraftforum.net/forums/support/server-support/server-administration/2460654-synology-nas-minecraft-server-install-package
 
 Compatitibility, Java, etc.
