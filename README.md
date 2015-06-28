@@ -11,6 +11,15 @@ Unfortunately it hadn't been updated in about 2 years, but from the comments it 
 using it and manually updating the files.  Well, BLECH!  I decided to try to clean it up because, well, I'm a glutton
 for punishment.
 
+You can find more information on my blog at:
+blog.heatdfw.com
+
+You can install the package from my repository at:
+http://www.hildinger.us/sspks/index.php
+
+I've started discussion threads at:
+http://forum.synology.com/enu/viewtopic.php?f=190&t=100311
+http://www.minecraftforum.net/forums/support/server-support/server-administration/2460654-synology-nas-minecraft-server-install-package
 
 Compatitibility, Java, etc.
 
