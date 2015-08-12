@@ -12,7 +12,7 @@ using it and manually updating the files.  Well, BLECH!  I decided to try to cle
 for punishment.
 
 You can find more information on my blog at:
-blog.heatdfw.com
+http://blog.heatdfw.com
 
 You can install the package from my repository at:
 http://www.hildinger.us/sspks/index.php
@@ -23,8 +23,8 @@ http://www.minecraftforum.net/forums/support/server-support/server-administratio
 
 Compatitibility, Java, etc.
 
-Honestly, any Synology machine that has the power should be OK, and I'm not able to tell you if yours is one of them.
-As of now, I'm using a RS814+ with DSM 5.1 and the Java VM published by Synology.  patters also has Java packages at:
+Honestly, any Synology machine that has the power should be OK, and I'm not able to tell you if yours is one of them -- they have a bunch of machines with a wide range of power.
+As of now, I'm using a RS814+ with DSM 5.2 (previously 5.1) and the Java VM published by Synology.  patters also has Java packages at:
 
 http://packages.pcloadletter.co.uk/
 
