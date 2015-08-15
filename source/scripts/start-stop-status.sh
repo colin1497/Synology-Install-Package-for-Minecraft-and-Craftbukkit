@@ -43,7 +43,7 @@ case $1 in
   ;;
   
   log)
-    echo "${SYNOPKG_PKGDEST}/server.log"
+    echo "${SYNOPKG_PKGDEST}/logs/latest.log"
     exit 0
   ;;
 esac
