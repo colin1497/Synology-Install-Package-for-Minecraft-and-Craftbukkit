@@ -41,7 +41,7 @@ case $1 in
     elif [ $RAM -le 512 ]; then
       JAVA_MAX_HEAP=416M
     elif [ $RAM -le 1024 ]; then
-      JAVA_MAX_HEAP=768M
+      JAVA_MAX_HEAP=832M
     elif [ $RAM -le 2048 ]; then
       JAVA_MAX_HEAP=1664M
     elif [ $RAM -gt 2048 ]; then
