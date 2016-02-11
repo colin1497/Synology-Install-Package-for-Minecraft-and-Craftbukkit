@@ -1,6 +1,6 @@
 package="Craftbukkit"
 displayname="CraftBukkit"
-version="1.8.8-0017"
+version="1.8.8-0018"
 maintainer="bukkit.org"
 maintainer_url="http://bukkit.org/"
 distributor="Colin Hildinger (thanks to patters)"

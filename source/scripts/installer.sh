@@ -9,7 +9,7 @@ if [ "${SYNOPKG_PKGNAME}" == "Minecraft" ]; then
   UPGRADE_FILES="server.properties *.txt world"
 fi
 if [ "${SYNOPKG_PKGNAME}" == "Craftbukkit" ]; then
-  DOWNLOAD_PATH="https://tcpr.ca/downloads/craftbukkit"
+  DOWNLOAD_PATH="http://tcpr.ca/files/craftbukkit"
   DOWNLOAD_FILE="craftbukkit-1.8.8-R0.1-SNAPSHOT-latest.jar"
   UPGRADE_FILES="server.properties *.txt *.yml world world_nether world_the_end plugins bukkit_update"
 fi
