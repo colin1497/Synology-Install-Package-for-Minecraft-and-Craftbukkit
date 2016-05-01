@@ -5,7 +5,7 @@
 
 if [ "${SYNOPKG_PKGNAME}" == "Minecraft" ]; then
   DOWNLOAD_PATH="http://s3.amazonaws.com/Minecraft.Download/versions/1.9"
-  DOWNLOAD_FILE="minecraft_server.1.9.jar"
+  DOWNLOAD_FILE="minecraft_server.1.9.2.jar"
   UPGRADE_FILES="server.properties *.txt world"
 fi
 if [ "${SYNOPKG_PKGNAME}" == "Craftbukkit" ]; then
