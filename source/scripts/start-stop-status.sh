@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #--------MINECRAFT/CRAFTBUKKIT start-stop-status script
-#--------package maintained at pcloadletter.co.uk
+#--------package maintained at blog.heatdfw.com
 
 DAEMON_USER="`echo ${SYNOPKG_PKGNAME} | awk {'print tolower($_)'}`"
 DAEMON_ID="${SYNOPKG_PKGNAME} daemon user"
@@ -10,7 +10,7 @@ DAEMON_USER_SHORT=`echo ${DAEMON_USER} | cut -c 1-8`
 
 daemon_status ()
 {
-    ps | grep "^ *[0-9]* ${DAEMON_USER_SHORT} .*java" > /dev/null
+    ps -efa | grep "minecraft" > /dev/null
 }
 
 case $1 in

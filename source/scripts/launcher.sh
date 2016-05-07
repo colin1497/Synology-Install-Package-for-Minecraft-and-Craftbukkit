@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #--------MINECRAFT/CRAFTBUKKIT server launcher script
-#--------package maintained at pcloadletter.co.uk
+#--------package maintained at blog.heatdfw.com
  
 #--------Allows graceful shutdown of server without CPU-specific binaries
 #--------You can send commands to the running server like so:
@@ -46,6 +46,8 @@ case $1 in
       JAVA_MAX_HEAP=1664M
     elif [ $RAM -gt 2048 ]; then
       JAVA_MAX_HEAP=2048M
+    elif [ $RAM -gt 4096 ]; then 
+      JAVA_MAX_HEAP=4096M
     fi
     JAVA_START_HEAP=${JAVA_MAX_HEAP}
     tail -n 0 -f /tmp/stdin.${DAEMON_USER} | java -Xmx${JAVA_START_HEAP} -Xms${JAVA_MAX_HEAP} ${JAVA_OPTS} -jar ${JAR_FILE} nogui
