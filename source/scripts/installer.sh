@@ -40,22 +40,14 @@ preinst ()
     exit 1
   fi
   
-  #is the User Home service enabled?
-  UH_SERVICE=maybe
-  synouser --add userhometest Testing123 "User Home test user" 0 "" ""
-  UHT_HOMEDIR=`cat /etc/passwd | sed -r '/User Home test user/!d;s/^.*:User Home test user:(.*):.*$/\1/'`
-  if echo $UHT_HOMEDIR | grep '/var/services/homes/' > /dev/null; then
-    if [ ! -d $UHT_HOMEDIR ]; then
-      UH_SERVICE=false
-    fi
-  fi
-  synouser --del userhometest
-  #remove home directory (needed since DSM 4.1)
-  [ -e /var/services/homes/userhometest ] && rm -r /var/services/homes/userhometest
-  if [ ${UH_SERVICE} == "false" ]; then
-    echo "The User Home service is not enabled. Please enable this feature in the User control panel in DSM."
-    exit 1
-  fi
+#is the User Home service enabled?
+UH_SERVICE=maybe
+UH_SERVICE=synogetkeyvalue /etc/synoinfo.conf userHomeEnable
+
+if [ ${UH_SERVICE} == "no" ]; then
+echo "The User Home service is not enabled. Please enable this feature in the User control panel in DSM."
+exit 1
+fi
 
   cd ${TEMP_FOLDER}
   for WGET_URL in ${INSTALL_FILES}
