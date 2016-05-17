@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#--------MINECRAFT/CRAFTBUKKIT installer script
+#--------MINECRAFT/CRAFTBUKKIT/Spigot installer script
 #--------package maintained at https://github.com/colin1497/Synology-Install-Package-for-Minecraft-and-Craftbukkit
 
 if [ "${SYNOPKG_PKGNAME}" == "Minecraft" ]; then
@@ -10,7 +10,12 @@ if [ "${SYNOPKG_PKGNAME}" == "Minecraft" ]; then
 fi
 if [ "${SYNOPKG_PKGNAME}" == "Craftbukkit" ]; then
   DOWNLOAD_PATH="http://tcpr.ca/download/craftbukkit"
-  DOWNLOAD_FILE="craftbukkit-1.8.3-R0.1-SNAPSHOT-latest.jar"
+  DOWNLOAD_FILE="craftbukkit-1.9.4-R0.1-SNAPSHOT-latest.jar"
+  UPGRADE_FILES="server.properties *.txt *.yml world world_nether world_the_end plugins bukkit_update"
+fi
+if [ "${SYNOPKG_PKGNAME}" == "Spigot" ]; then
+  DOWNLOAD_PATH="http://getspigot.org/jenkins/job/Spigot/64/artifact/"
+  DOWNLOAD_FILE="spigot-1.9.4.jar"
   UPGRADE_FILES="server.properties *.txt *.yml world world_nether world_the_end plugins bukkit_update"
 fi
 
