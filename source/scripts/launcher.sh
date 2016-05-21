@@ -7,6 +7,7 @@
 #--------You can send commands to the running server like so:
 #--------    echo say Hello players >> /tmp/stdin.minecraft
 #--------    echo say Hello players >> /tmp/stdin.craftbukkit
+#--------    echo say Hello players >> /tmp/stdin.spigot
 
 DAEMON_USER=$2
 SYNOPKG_PKGDEST=$3
@@ -44,8 +45,10 @@ case $1 in
       JAVA_MAX_HEAP=832M
     elif [ $RAM -le 2048 ]; then
       JAVA_MAX_HEAP=1664M
-    elif [ $RAM -gt 2048 ]; then
-      JAVA_MAX_HEAP=2048M
+    elif [ $RAM -le 3072 ]; then
+      JAVA_MAX_HEAP=2560M
+    elif [ $RAM -le 4096 ]; then 
+      JAVA_MAX_HEAP=3584M
     elif [ $RAM -gt 4096 ]; then 
       JAVA_MAX_HEAP=4096M
     fi
