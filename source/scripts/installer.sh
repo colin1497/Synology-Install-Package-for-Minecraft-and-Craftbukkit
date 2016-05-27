@@ -6,17 +6,17 @@
 if [ "${SYNOPKG_PKGNAME}" == "Minecraft" ]; then
   DOWNLOAD_PATH="http://s3.amazonaws.com/Minecraft.Download/versions/1.9.4"
   DOWNLOAD_FILE="minecraft_server.1.9.4.jar"
-  UPGRADE_FILES="server.properties *.txt world"
+  UPGRADE_FILES="server.properties *.txt world *.json"
 fi
 if [ "${SYNOPKG_PKGNAME}" == "Craftbukkit" ]; then
   DOWNLOAD_PATH="http://tcpr.ca/files/craftbukkit"
   DOWNLOAD_FILE="craftbukkit-1.9.4-R0.1-SNAPSHOT-latest.jar"
-  UPGRADE_FILES="server.properties *.txt *.yml world world_nether world_the_end plugins bukkit_update"
+  UPGRADE_FILES="server.properties *.txt *.yml world world_nether world_the_end plugins bukkit_update *.json"
 fi
 if [ "${SYNOPKG_PKGNAME}" == "Spigot" ]; then
   DOWNLOAD_PATH="http://getspigot.org/jenkins/job/Spigot/64/artifact/"
   DOWNLOAD_FILE="spigot-1.9.4.jar"
-  UPGRADE_FILES="server.properties *.txt *.yml world world_nether world_the_end plugins bukkit_update"
+  UPGRADE_FILES="server.properties *.txt *.yml world world_nether world_the_end plugins spigot_update *.json"
 fi
 
 DOWNLOAD_URL="${DOWNLOAD_PATH}/${DOWNLOAD_FILE}"
