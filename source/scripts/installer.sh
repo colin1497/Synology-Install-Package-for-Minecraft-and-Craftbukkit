@@ -4,18 +4,18 @@
 #--------package maintained at https://github.com/colin1497/Synology-Install-Package-for-Minecraft-and-Craftbukkit
 
 if [ "${SYNOPKG_PKGNAME}" == "Minecraft" ]; then
-  DOWNLOAD_PATH="http://s3.amazonaws.com/Minecraft.Download/versions/1.9.4"
-  DOWNLOAD_FILE="minecraft_server.1.9.4.jar"
+  DOWNLOAD_PATH="http://s3.amazonaws.com/Minecraft.Download/versions/1.10"
+  DOWNLOAD_FILE="minecraft_server.1.10.jar"
   UPGRADE_FILES="server.properties *.txt world *.json"
 fi
 if [ "${SYNOPKG_PKGNAME}" == "Craftbukkit" ]; then
-  DOWNLOAD_PATH="http://tcpr.ca/files/craftbukkit"
-  DOWNLOAD_FILE="craftbukkit-1.9.4-R0.1-SNAPSHOT-latest.jar"
+  DOWNLOAD_PATH="https://ci.mcadmin.net/job/CraftBukkit/231/artifact"
+  DOWNLOAD_FILE="craftbukkit-1.10.jar"
   UPGRADE_FILES="server.properties *.txt *.yml world world_nether world_the_end plugins bukkit_update *.json"
 fi
 if [ "${SYNOPKG_PKGNAME}" == "Spigot" ]; then
-  DOWNLOAD_PATH="http://getspigot.org/jenkins/job/Spigot/64/artifact/"
-  DOWNLOAD_FILE="spigot-1.9.4.jar"
+  DOWNLOAD_PATH="https://ci.mcadmin.net/job/Spigot/71/artifact"
+  DOWNLOAD_FILE="spigot-1.10.jar"
   UPGRADE_FILES="server.properties *.txt *.yml world world_nether world_the_end plugins spigot_update *.json"
 fi
 
