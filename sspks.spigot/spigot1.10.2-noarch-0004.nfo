@@ -1,6 +1,6 @@
 package="Spigot"
 displayname="Spigot"
-version="1.10.0-0003"
+version="1.10.2-0004"
 maintainer="getspigot.org"
 maintainer_url="https://getspigot.org/"
 distributor="Colin Hildinger (thanks to Manfred Stumpf)"
