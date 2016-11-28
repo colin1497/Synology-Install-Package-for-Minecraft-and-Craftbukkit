@@ -49,8 +49,10 @@ case $1 in
       JAVA_MAX_HEAP=2560M
     elif [ $RAM -le 4096 ]; then 
       JAVA_MAX_HEAP=3584M
-    elif [ $RAM -gt 4096 ]; then 
+    elif [ $RAM -le 6144 ]; then 
       JAVA_MAX_HEAP=4096M
+    elif [ $RAM -gt 6144 ]; then 
+      JAVA_MAX_HEAP=5120M      
     fi
     JAVA_START_HEAP=${JAVA_MAX_HEAP}
     tail -n 0 -f /tmp/stdin.${DAEMON_USER} | java -Xmx${JAVA_START_HEAP} -Xms${JAVA_MAX_HEAP} ${JAVA_OPTS} -jar ${JAR_FILE} nogui
