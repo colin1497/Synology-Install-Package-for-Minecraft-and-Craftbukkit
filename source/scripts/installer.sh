@@ -9,12 +9,12 @@ if [ "${SYNOPKG_PKGNAME}" == "Minecraft" ]; then
   UPGRADE_FILES="server.properties *.txt world *.json"
 fi
 if [ "${SYNOPKG_PKGNAME}" == "Craftbukkit" ]; then
-  DOWNLOAD_PATH="https://ci.mcadmin.net/job/CraftBukkit/428/artifact"
+  DOWNLOAD_PATH="http://dl.getspigotmc.org/job/CraftBukkit/197/artifact"
   DOWNLOAD_FILE="craftbukkit-1.11.2.jar"
   UPGRADE_FILES="server.properties *.txt *.yml world world_nether world_the_end plugins bukkit_update *.json"
 fi
 if [ "${SYNOPKG_PKGNAME}" == "Spigot" ]; then
-  DOWNLOAD_PATH="https://ci.mcadmin.net/job/Spigot/119/artifact"
+  DOWNLOAD_PATH="http://dl.getspigotmc.org/job/Spigot/201/artifact"
   DOWNLOAD_FILE="spigot-1.11.2.jar"
   UPGRADE_FILES="server.properties *.txt *.yml world world_nether world_the_end plugins spigot_update *.json"
 fi
