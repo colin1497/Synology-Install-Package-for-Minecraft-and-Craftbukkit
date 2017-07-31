@@ -4,18 +4,18 @@
 #--------package maintained at https://github.com/colin1497/Synology-Install-Package-for-Minecraft-and-Craftbukkit
 
 if [ "${SYNOPKG_PKGNAME}" == "Minecraft" ]; then
-  DOWNLOAD_PATH="https://s3.amazonaws.com/Minecraft.Download/versions/1.11.2"
-  DOWNLOAD_FILE="minecraft_server.1.11.2.jar"
+  DOWNLOAD_PATH="https://s3.amazonaws.com/Minecraft.Download/versions/1.12"
+  DOWNLOAD_FILE="minecraft_server.1.12.jar"
   UPGRADE_FILES="server.properties *.txt world *.json"
 fi
 if [ "${SYNOPKG_PKGNAME}" == "Craftbukkit" ]; then
-  DOWNLOAD_PATH="https://ci.mcadmin.net/job/CraftBukkit/428/artifact"
-  DOWNLOAD_FILE="craftbukkit-1.11.2.jar"
+  DOWNLOAD_PATH="https://yivesmirror.com/grab/craftbukkit"
+  DOWNLOAD_FILE="craftbukkit-1.12-R0.1-SNAPSHOT-b1346.jar"
   UPGRADE_FILES="server.properties *.txt *.yml world world_nether world_the_end plugins bukkit_update *.json"
 fi
 if [ "${SYNOPKG_PKGNAME}" == "Spigot" ]; then
-  DOWNLOAD_PATH="https://ci.mcadmin.net/job/Spigot/119/artifact"
-  DOWNLOAD_FILE="spigot-1.11.2.jar"
+  DOWNLOAD_PATH="https://yivesmirror.com/grab/spigot"
+  DOWNLOAD_FILE="spigot-1.12-R0.1-SNAPSHOT-b1346.jar"
   UPGRADE_FILES="server.properties *.txt *.yml world world_nether world_the_end plugins spigot_update *.json"
 fi
 
@@ -28,7 +28,6 @@ ENGINE_SCRIPT="/var/packages/${SYNOPKG_PKGNAME}/scripts/launcher.sh"
 INSTALL_FILES="${DOWNLOAD_URL}"
 source /etc/profile
 TEMP_FOLDER="`find / -maxdepth 2 -name '@tmp' | head -n 1`"
-PUBLIC_FOLDER="$(synoshare --get public | grep -oP 'Path.+\[\K[^]]+')"
 PRIMARY_VOLUME="/`echo $TEMP_FOLDER | cut -f2 -d'/'`"
 WORLD_BACKUP="${PRIMARY_VOLUME}/public/${DAEMON_USER}world.`date +\"%d-%b\"`.bak"
 
