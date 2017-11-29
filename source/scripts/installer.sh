@@ -5,18 +5,18 @@
 
 if [ "${SYNOPKG_PKGNAME}" == "Minecraft" ]; then
 
-  DOWNLOAD_PATH="https://s3.amazonaws.com/Minecraft.Download/versions/1.12.1"
-  DOWNLOAD_FILE="minecraft_server.1.12.1.jar"
+  DOWNLOAD_PATH="https://s3.amazonaws.com/Minecraft.Download/versions/1.12.2"
+  DOWNLOAD_FILE="minecraft_server.1.12.2.jar"
   UPGRADE_FILES="server.properties *.txt world *.json"
 fi
 if [ "${SYNOPKG_PKGNAME}" == "Craftbukkit" ]; then
-  DOWNLOAD_PATH="https://yivesmirror.com/files/craftbukkit"
-  DOWNLOAD_FILE="craftbukkit-1.12.1-R0.1-SNAPSHOT-b1389.jar"
+  DOWNLOAD_PATH="https://cdn.getbukkit.org/craftbukkit"
+  DOWNLOAD_FILE="craftbukkit-1.12.2.jar"
   UPGRADE_FILES="server.properties *.txt *.yml world world_nether world_the_end plugins bukkit_update *.json"
 fi
 if [ "${SYNOPKG_PKGNAME}" == "Spigot" ]; then
-  DOWNLOAD_PATH="https://yivesmirror.com/files/spigot"
-  DOWNLOAD_FILE="spigot-1.12.1-R0.1-SNAPSHOT-b1389.jar"
+  DOWNLOAD_PATH="https://cdn.getbukkit.org/spigot"
+  DOWNLOAD_FILE="spigot-1.12.2.jar"
   UPGRADE_FILES="server.properties *.txt *.yml world world_nether world_the_end plugins spigot_update *.json"
 fi
 
