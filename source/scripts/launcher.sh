@@ -8,6 +8,7 @@
 #--------    echo say Hello players >> /tmp/stdin.minecraft
 #--------    echo say Hello players >> /tmp/stdin.craftbukkit
 #--------    echo say Hello players >> /tmp/stdin.spigot
+#--------    echo say Hello players >> /tmp/stdin.nukkitx
 
 DAEMON_USER=$2
 SYNOPKG_PKGDEST=$3

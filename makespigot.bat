@@ -6,3 +6,4 @@ copy .\source\INFO.spigot .\sspks.spigot\spigot%1-noarch-%2.nfo
 "C:\Program Files\7-Zip\7z" rn -ttar .\sspks.spigot\spigot%1-noarch-%2.spk INFO.spigot INFO
 "C:\Program Files\7-Zip\7z" d -ttar .\sspks.spigot\spigot%1-noarch-%2.spk INFO.craftbukkit
 "C:\Program Files\7-Zip\7z" d -ttar .\sspks.spigot\spigot%1-noarch-%2.spk INFO.minecraft
+"C:\Program Files\7-Zip\7z" d -ttar .\sspks.spigot\spigot%1-noarch-%2.spk INFO.nukkitx
