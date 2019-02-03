@@ -22,7 +22,6 @@ if [ "${SYNOPKG_PKGNAME}" == "NukkitX" ]; then
   DOWNLOAD_PATH="https://ci.nukkitx.com/job/NukkitX/job/Nukkit/job/master/lastSuccessfulBuild/artifact/target"
   DOWNLOAD_FILE="nukkit-1.0-SNAPSHOT.jar"
   UPGRADE_FILES="server.properties *.txt *.yml world world_nether world_the_end plugins spigot_update *.json"
-  # https://ci.nukkitx.com/job/NukkitX/job/Nukkit/job/master/lastSuccessfulBuild/artifact/target/nukkit-1.0-SNAPSHOT.jar
 fi
 
 DOWNLOAD_URL="${DOWNLOAD_PATH}/${DOWNLOAD_FILE}"
