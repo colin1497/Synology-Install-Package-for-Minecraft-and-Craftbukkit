@@ -1,6 +1,6 @@
 package="Spigot"
 displayname="Spigot"
-version="1.14.1-0012"
+version="1.14.2-0013"
 maintainer="getbukkit.org"
 maintainer_url="http://getbukkit.org/"
 distributor="Colin Hildinger (thanks to Manfred Stumpf)"
