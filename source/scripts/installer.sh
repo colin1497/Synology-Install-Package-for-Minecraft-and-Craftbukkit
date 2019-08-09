@@ -4,18 +4,18 @@
 #--------package maintained at https://github.com/colin1497/Synology-Install-Package-for-Minecraft-and-Craftbukkit
 
 if [ "${SYNOPKG_PKGNAME}" == "Minecraft" ]; then
-  DOWNLOAD_PATH="https://launcher.mojang.com/v1/objects/3737db93722a9e39eeada7c27e7aca28b144ffa7"
+  DOWNLOAD_PATH="https://launcher.mojang.com/v1/objects/808be3869e2ca6b62378f9f4b33c946621620019"
   DOWNLOAD_FILE="server.jar"
   UPGRADE_FILES="server.properties *.txt world *.json"
 fi
 if [ "${SYNOPKG_PKGNAME}" == "Craftbukkit" ]; then
   DOWNLOAD_PATH="https://cdn.getbukkit.org/craftbukkit"
-  DOWNLOAD_FILE="craftbukkit-1.13.2.jar"
+  DOWNLOAD_FILE="craftbukkit-1.14.2-r0.1-snapshot.jar"
   UPGRADE_FILES="server.properties *.txt *.yml world world_nether world_the_end plugins bukkit_update *.json"
 fi
 if [ "${SYNOPKG_PKGNAME}" == "Spigot" ]; then
   DOWNLOAD_PATH="https://cdn.getbukkit.org/spigot"
-  DOWNLOAD_FILE="spigot-1.13.2.jar"
+  DOWNLOAD_FILE="spigot-1.14.2.jar"
   UPGRADE_FILES="server.properties *.txt *.yml world world_nether world_the_end plugins spigot_update *.json"
 fi
 if [ "${SYNOPKG_PKGNAME}" == "NukkitX" ]; then
