@@ -8,7 +8,7 @@
 #--------    echo say Hello players >> /tmp/stdin.minecraft
 #--------    echo say Hello players >> /tmp/stdin.craftbukkit
 #--------    echo say Hello players >> /tmp/stdin.spigot
-#--------    echo say Hello players >> /tmp/stdin.nukkitx
+#--------    echo say Hello players >> /tmp/stdin.nukkit
 
 DAEMON_USER=$2
 SYNOPKG_PKGDEST=$3
@@ -39,7 +39,7 @@ case $1 in
     if [ $RAM -le 128 ]; then
       JAVA_MAX_HEAP=80M
     elif [ $RAM -le 256 ]; then
-      JAVA_MAX_HEAP=160M			
+      JAVA_MAX_HEAP=160M
     elif [ $RAM -le 512 ]; then
       JAVA_MAX_HEAP=416M
     elif [ $RAM -le 1024 ]; then
@@ -53,7 +53,7 @@ case $1 in
     elif [ $RAM -le 6144 ]; then 
       JAVA_MAX_HEAP=4096M
     elif [ $RAM -gt 6144 ]; then 
-      JAVA_MAX_HEAP=5120M      
+      JAVA_MAX_HEAP=5120M
     fi
     JAVA_START_HEAP=${JAVA_MAX_HEAP}
     tail -n 0 -f /tmp/stdin.${DAEMON_USER} | java -Xmx${JAVA_START_HEAP} -Xms${JAVA_MAX_HEAP} ${JAVA_OPTS} -jar ${JAR_FILE} nogui
