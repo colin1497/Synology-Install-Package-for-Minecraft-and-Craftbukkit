@@ -4,7 +4,6 @@
 #--------package maintained at https://github.com/colin1497/Synology-Install-Package-for-Minecraft-and-Craftbukkit
 
 if [ "${SYNOPKG_PKGNAME}" == "Minecraft" ]; then
-
   DOWNLOAD_PATH="https://launcher.mojang.com/v1/objects/808be3869e2ca6b62378f9f4b33c946621620019"
   DOWNLOAD_FILE="server.jar"
   UPGRADE_FILES="server.properties *.txt world *.json"
@@ -17,6 +16,11 @@ fi
 if [ "${SYNOPKG_PKGNAME}" == "Spigot" ]; then
   DOWNLOAD_PATH="https://cdn.getbukkit.org/spigot"
   DOWNLOAD_FILE="spigot-1.14.2.jar"
+  UPGRADE_FILES="server.properties *.txt *.yml world world_nether world_the_end plugins spigot_update *.json"
+fi
+if [ "${SYNOPKG_PKGNAME}" == "Nukkit" ]; then
+  DOWNLOAD_PATH="https://ci.nukkitx.com/job/NukkitX/job/Nukkit/job/master/lastSuccessfulBuild/artifact/target"
+  DOWNLOAD_FILE="nukkit-1.0-SNAPSHOT.jar"
   UPGRADE_FILES="server.properties *.txt *.yml world world_nether world_the_end plugins spigot_update *.json"
 fi
 
@@ -64,7 +68,8 @@ fi
     if [[ $? != 0 ]]; then
       if [ -d ${PUBLIC_FOLDER} ] && [ -f ${PUBLIC_FOLDER}/${WGET_FILENAME} ]; then
         cp ${PUBLIC_FOLDER}/${WGET_FILENAME} ${TEMP_FOLDER}
-      else     
+        cp ${TEMP_FOLDER}/${WGET_FILENAME} ${PUBLIC_FOLDER}
+      else
         echo "There was a problem downloading ${WGET_FILENAME} from the official download link, "
         echo "which was \"${WGET_URL}\" "
         echo "Alternatively, you may download this file manually and place it in the 'public' shared folder. "
