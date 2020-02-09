@@ -1,6 +1,6 @@
 package="Minecraft"
 displayname="Minecraft Server"
-version="1.14.2-0038"
+version="1.15.2-0039"
 maintainer="Mojang AB"
 maintainer_url="http://minecraft.net"
 distributor="Colin Hildinger (thanks to patters)"
