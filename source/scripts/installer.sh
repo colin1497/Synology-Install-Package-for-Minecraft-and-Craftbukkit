@@ -4,7 +4,6 @@
 #--------package maintained at https://github.com/colin1497/Synology-Install-Package-for-Minecraft-and-Craftbukkit
 
 if [ "${SYNOPKG_PKGNAME}" == "Minecraft" ]; then
-
   DOWNLOAD_PATH="https://launcher.mojang.com/v1/objects/bb2b6b1aefcd70dfd1892149ac3a215f6c636b07"
   DOWNLOAD_FILE="server.jar"
   UPGRADE_FILES="server.properties *.txt world *.json"
@@ -19,6 +18,17 @@ if [ "${SYNOPKG_PKGNAME}" == "Spigot" ]; then
   DOWNLOAD_FILE="spigot-1.15.2.jar"
   UPGRADE_FILES="server.properties *.txt *.yml world world_nether world_the_end plugins spigot_update *.json"
 fi
+if [ "${SYNOPKG_PKGNAME}" == "Paper" ]; then
+  DOWNLOAD_PATH="https://papermc.io/ci/job/Paper-1.15/lastSuccessfulBuild/artifact"
+  DOWNLOAD_FILE="paperclip-318.jar"
+  UPGRADE_FILES="server.properties *.txt *.yml world world_nether world_the_end plugins spigot_update *.json"
+fi
+if [ "${SYNOPKG_PKGNAME}" == "Bedrock" ]; then
+  DOWNLOAD_PATH="https://minecraft.azureedge.net/bin-linux"
+  DOWNLOAD_FILE="bedrock-server-1.14.21.0.zip"
+  UPGRADE_FILES="server.properties *.txt world *.json"
+fi
+
 
 DOWNLOAD_URL="${DOWNLOAD_PATH}/${DOWNLOAD_FILE}"
 DAEMON_USER="`echo ${SYNOPKG_PKGNAME} | awk {'print tolower($_)'}`"
