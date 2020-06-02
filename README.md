@@ -11,6 +11,8 @@ Unfortunately it hadn't been updated in about 2 years, but from the comments it 
 using it and manually updating the files.  Well, BLECH!  I decided to try to clean it up because, well, I'm a glutton
 for punishment.
 
+Craftbukkit was effectively killed off and replaced by Spigot, so I added it to the package, and I recently added Paper, a highly efficient Spigot fork, to the package.  Paper is probably the best Java minecraft server to run right now if you're running a low resource server like a NAS.
+
 You can find more information on my blog at:
 
 http://blog.heatdfw.com/p/synology-minecraft-server-setup.html
