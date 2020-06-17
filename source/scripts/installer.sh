@@ -20,7 +20,7 @@ if [ "${SYNOPKG_PKGNAME}" == "Spigot" ]; then
 fi
 if [ "${SYNOPKG_PKGNAME}" == "Paper" ]; then
   DOWNLOAD_PATH="https://papermc.io/ci/job/Paper-1.15/lastSuccessfulBuild/artifact"
-  DOWNLOAD_FILE="paperclip-318.jar"
+  DOWNLOAD_FILE="paperclip.jar"
   UPGRADE_FILES="server.properties *.txt *.yml world world_nether world_the_end plugins spigot_update *.json"
 fi
 if [ "${SYNOPKG_PKGNAME}" == "Bedrock" ]; then
